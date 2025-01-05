@@ -178,3 +178,37 @@ setInterval(() => {
         heartIndex = 0;
     }
 }, 15000);
+
+document.addEventListener('DOMContentLoaded', function() {
+    const backgroundMusic = document.getElementById('backgroundMusic');
+    
+    // Intenta reproducir el audio
+    const playPromise = backgroundMusic.play();
+
+    if (playPromise !== undefined) {
+        playPromise.catch(error => {
+            console.log('Auto-play was prevented:', error);
+            // Opcional: Puedes mostrar un botón para que el usuario inicie la reproducción
+            const playButton = document.createElement('button');
+            playButton.classList.add('btn', 'btn-pixel');
+            playButton.textContent = 'Reproducir Música';
+            playButton.onclick = function() {
+                backgroundMusic.play();
+                playButton.style.display = 'none';
+            };
+            document.body.appendChild(playButton);
+        });
+    }
+});
+
+function toggleMusic() {
+    const music = document.getElementById('backgroundMusic');
+    const button = document.querySelector('.btn-pixel[onclick="toggleMusic()"]');
+    if (music.paused) {
+        music.play();
+        button.textContent = 'Detener Música';
+    } else {
+        music.pause();
+        button.textContent = 'Reproducir Música';
+    }
+}

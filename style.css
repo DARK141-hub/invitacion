@@ -173,6 +173,27 @@ header h1 {
     display: none;
 }
 
+.btn-pixel {
+    border: 2px solid var(--pixel-light);
+    background: var(--pixel-dark);
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    text-transform: uppercase;
+    transition: transform 0.3s, background 0.3s;
+    margin-top: 20px;
+    display: inline-block;
+    width: 80%;
+    max-width: 300px;
+    margin-left:auto ;
+    margin-right: auto;
+    text-align: center;
+}
+
+.btn-pixel:hover {
+    transform: scale(1.1);
+    background: var(--pixel-light);
+}
 
 
 /* Media Queries para Responsividad */
@@ -181,7 +202,7 @@ header h1 {
         font-size: 10px;
     }
     header h1 {
-        font-size: 1.2em;
+        font-size: 1.9em;
     }
     .btn-pixel {
         width: 90%;
@@ -215,6 +236,10 @@ header h1 {
     #dislike{
         width: 30vw;
     }
+    .btn-pixel{
+        width: 100%;
+        font-size: 0.9em;
+    }
 }
 
 @media (max-width: 480px) {
@@ -222,7 +247,7 @@ header h1 {
         font-size: 8px;
     }
     header h1 {
-        font-size: 1em;
+        font-size: 1.7em;
     }
     .btn-pixel {
         width: 100%;
@@ -255,5 +280,9 @@ header h1 {
     }
     #dislike{
         width: 40vw;
+    }
+    .btn-pixel{
+        width: 100%;
+        font-size: 0.8em;
     }
 }
