@@ -109,8 +109,34 @@ function animateParticles() {
     requestAnimationFrame(animateParticles);
 }
 
-function showParticles() {
-    createParticles();
+// Confetti animation function
+function showConfetti() {
+    const confettiContainer = document.createElement('div');
+    confettiContainer.id = 'confetti';
+    document.body.appendChild(confettiContainer);
+
+    for (let i = 0; i < 100; i++) {
+        const confettiPiece = document.createElement('div');
+        confettiPiece.className = 'confetti-piece';
+        confettiPiece.style.left = `${Math.random() * 100}vw`;
+        confettiPiece.style.background = `#${Math.floor(Math.random()*16777215).toString(16)}`; // Colores aleatorios
+        confettiPiece.style.animationDelay = `${Math.random() * 3}s`;
+        confettiContainer.appendChild(confettiPiece);
+    }
+
+    confettiContainer.style.display = 'block';
+    setTimeout(() => {
+        confettiContainer.remove(); // Remove the confetti container
+    }, 3000);
+}
+
+// Mostrar dislike
+function showDislike() {
+    const dislikeContainer = document.getElementById('dislike');
+    dislikeContainer.style.display = 'block';
+    setTimeout(() => {
+        dislikeContainer.style.display = 'none';
+    }, 3000);
 }
 
 window.addEventListener('resize', () => {
@@ -122,7 +148,7 @@ window.addEventListener('resize', () => {
 animateParticles(); // Start animation loop
 setInterval(createParticles, 500);
 
-// Clock and Life Bar Logic
+// Lógica del Reloj y Barra de Vida
 function updateClock() {
     const now = new Date();
     const hours = now.getHours().toString().padStart(2, '0');
