@@ -9,8 +9,11 @@
 </head>
 <body class="bg-dark text-light retro-font">
 
+<div class="glass-panel">
     <header class="text-center p-4">
         <h1>🎉 Welcome to Alan's Retro Birthday! 🎮</h1>
+        <div id="clock" class="text-center my-3"></div>
+        <div id="life-bar" class="text-center my-3"></div>
     </header>
 
     <div class="container my-5">
@@ -38,36 +41,37 @@
         <h2>🎵 Escucha la rolita de mi pumpe (lit yo cawn) 🎶</h2>
         <figure>
             <figcaption>Escuchala :3</figcaption>
-            <audio controls>
+            <audio controls class="audio-player">
                 <source src="Kanye West - I Wonder (Subtitulado Al Español).mp3" type="audio/mpeg">
             </audio>
         </figure>
     </div>
 
-           <!-- Gifts Section -->
-           <div class="regalos bg-light text-center p-4 rounded my-5">
-            <h2>Acepto regalos:</h2>
-            <p>
-                Efectivo, proteína, creatina monohidratada con sello creapure, ropa (talla M), playera de mis chivas o transferencias je.
-            </p>
-        </div>
+    <!-- Gifts Section -->
+    <div class="regalos text-center p-4 rounded my-5">
+        <h2>Acepto regalos:</h2>
+        <p>
+            Efectivo, proteína, creatina monohidratada con sello creapure, ropa (talla M), playera de mis chivas o transferencias je.
+        </p>
+    </div>
 
-        <!-- Outro Section -->
-        <div class="outro text-center my-5">
-            <h1>Creditos a:</h1>
-            <p>
-                A mí q me aventé este jale obviamente y puede que mi amigazo CHAT GPT me haya ayudado un poco nyejeje.
-            </p>
-            <p>
-                Espero que puedan asistir a mi pumpe los espero con ansias. <br>
-                Están cordialmente invitados a mi convivio.
-            </p>
-            <h1>NOTA IMPORTANTE:</h1>
-            <p>
-                Si quieren traer alcohol no me opongo nomas q yo no tomo (mucho), <br>
-                pero si quieren traer con total confianza, nomas no sean mala copas xddd.
-            </p>
-        </div>
+    <!-- Outro Section -->
+    <div class="outro text-center my-5">
+        <h1>Creditos a:</h1>
+        <p>
+            A mí q me aventé este jale obviamente y puede que mi amigazo CHAT GPT me haya ayudado un poco nyejeje.
+        </p>
+        <p>
+            Espero que puedan asistir a mi pumpe los espero con ansias. <br>
+            Están cordialmente invitados a mi convivio.
+        </p>
+        <h1>NOTA IMPORTANTE:</h1>
+        <p>
+            Si quieren traer alcohol no me opongo nomas q yo no tomo (mucho), <br>
+            pero si quieren traer con total confianza, nomas no sean mala copas xddd.
+        </p>
+    </div>
+</div>
 
     <canvas id="particleCanvas"></canvas>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
